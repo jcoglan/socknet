@@ -41,7 +41,8 @@ client.on('connect', function() {
 
 ### Step 3: Run the `redis` module in the browser I guess
 
-TODO
+I have started on this; you can make a connection to Redis from the browser;
+see `examples/main.html`.
 
 
 ## License

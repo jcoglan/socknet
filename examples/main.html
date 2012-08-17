@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hello, SockNet</title>
+    <script type="text/javascript" src="../lib/socknet.js"></script>
+  </head>
+  <body>
+    
+    <h1>Hello, SockNet</h1>
+    
+    <div id="result"></div>
+    
+    <script type="text/javascript">
+      SockNet.setProxy('ws://localhost:4567');
+      var conn = SockNet.createConnection(6379, 'localhost');
+      
+      conn.on('connect', function() {
+        var command = ['*2', '$3', 'GET', '$3', 'foo', ''].join('\r\n');
+        conn.write(command);
+        conn.on('data', function(buffer) {
+          var parts = buffer.toString().split('\r\n');
+          var result = document.getElementById('result');
+          result.innerHTML = parts[1];
+        });
+      });
+    </script>
+    
+  </body>
+</html>
+
