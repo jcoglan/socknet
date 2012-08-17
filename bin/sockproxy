@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var SockProxy = require('../lib/sock_proxy'),
+    server    = new SockProxy(process.argv[2]);
+
+server.start();
+
