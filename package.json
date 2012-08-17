@@ -7,10 +7,9 @@
 , "version"         : "0.1.0"
 , "engines"         : {"node": ">=0.4.0"}
 , "main"            : "./lib/socknet"
+, "bin"             : {"sockproxy": "./bin/sockproxy"}
 , "dependencies"    : {"faye-websocket": ""},
 , "devDependencies" : {"redis": ""}
-
-, "scripts"         : {"test": "node spec/runner.js"}
 
 , "bugs"            : {"url": "http://github.com/jcoglan/socknet/issues"}
 
