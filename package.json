@@ -8,7 +8,7 @@
 , "engines"         : {"node": ">=0.4.0"}
 , "main"            : "./lib/socknet"
 , "bin"             : {"sockproxy": "./bin/sockproxy"}
-, "dependencies"    : {"faye-websocket": ""},
+, "dependencies"    : {"faye-websocket": ""}
 , "devDependencies" : {"redis": ""}
 
 , "bugs"            : {"url": "http://github.com/jcoglan/socknet/issues"}
